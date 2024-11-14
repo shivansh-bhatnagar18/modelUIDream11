@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import SearchDropdown from '@/app/components/searchDropdown'
-import PlayerComponent from '@/app/components/playerAvatar'
+import SearchDropdown from '@/components/searchDropdown'
+import PlayerComponent from '@/components/playerAvatar'
 
 
 function page2() {
