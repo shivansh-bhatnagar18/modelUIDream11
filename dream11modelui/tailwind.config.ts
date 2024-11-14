@@ -17,6 +17,7 @@ export default {
       },
       backgroundImage: {
         'ground': "url('/public/bg.png')",
+        'sadium':"url('/public/stadium.png')"
       }
     },
   },
