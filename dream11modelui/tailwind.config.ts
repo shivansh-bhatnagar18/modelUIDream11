@@ -13,10 +13,10 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        barlo: ["Barlow Condensed"]
+        barlow: ["Barlow Condensed"]
       },
       backgroundImage: {
-        'ground': "url('/app/image 3.png')",
+        'ground': "url('/public/bg.png')",
       }
     },
   },
