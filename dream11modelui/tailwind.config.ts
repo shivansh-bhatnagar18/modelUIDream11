@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        barlo: ["Barlow Condensed"]
+      },
+      backgroundImage: {
+        'ground': "url('/app/image 3.png')",
+      }
     },
   },
   plugins: [],
