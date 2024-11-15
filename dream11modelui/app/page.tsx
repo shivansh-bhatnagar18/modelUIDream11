@@ -57,18 +57,21 @@ export default function Home() {
       <CssBaseline />
       <div className="h-screen flex justify-center bg-[#000426] flex-wrap opacity-90">
         {/* <img src='/bg.png' alt="logo" className="w-24 h-24 mt-10" /> */}
-        <div className="mt-10 font-bold text-5xl text-center w-screen">
+        <div className="mt-10 font-bold text-8xl text-center w-screen">
           DREAM11
         </div>
         <div className="flex flex-col items-center">
-          <div className="mt-20 font-bold text-2xl">
-            SELECT YOUR TRAINING AND TESTING PERIOD
+          <div className="font-bold text-5xl">
+            SELECT YOUR TRAINING AND
+          </div>
+          <div className="font-bold text-5xl justify-center">
+            TESTING PERIOD
           </div> 
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
-            <div className='pt-10'>
+            <div className='mt-11 bg-[#D9D9D9] rounded-l'>
               <SearchDropdown label="Training Period" periodData={periodData} />
             </div>
-            <div className='pt-1'>
+            <div className='mt-1 bg-[#D9D9D9] rounded-l'>
               <SearchDropdown label="Testing Period" periodData={periodData} />
             </div>
             <Button type="submit" variant="contained" color="primary" className="mt-10">
