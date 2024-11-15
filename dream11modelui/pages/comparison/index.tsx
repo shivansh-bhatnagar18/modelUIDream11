@@ -2,6 +2,23 @@
 import React from 'react'
 import SearchDropdown from '@/components/searchDropdown'
 import PlayerComponent from '@/components/playerAvatar'
+import { Button } from '@mui/material'
+import PlayerFormation from '@/components/playerFormation'
+
+const playerData = [
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/2/2.png', number: 1, name: 'Zaheer Abbas' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/3/3.png', number: 2, name: 'Ahmed Shehzad' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/4/4.png', number: 3, name: 'Anwar Ali' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/5/5.png', number: 4, name: 'Sarfraz Ahmed' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/6/6.png', number: 5, name: 'Azhar Ali' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/7/7.png', number: 6, name: 'Fakhar Zaman' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/8/8.png', number: 7, name: 'Imam ul Haq' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/9/9.png', number: 8, name: 'Babar Azam' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/10/10.png', number: 9, name: 'Asad Shafiq' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/11/11.png', number: 10, name: 'Haris Sohail' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/12/12.png', number: 11, name: 'Usman Salahuddin' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/13/13.png', number: 12, name: 'Yasir Shah' }
+]
 
 function Comparison() {
     const periodData = [
@@ -21,8 +38,10 @@ function Comparison() {
         <div className="mt-10 pb-10 font-bold text-8xl text-center">
           DREAM11
         </div>
+        <div className='flex flex-row justify-center'>
         <div className='w-min flex justify-center bg-[#D9D9D9] rounded-l'>
           <SearchDropdown label="Select Match" periodData={periodData} />
+        </div>
         </div>
         <div className='data flex flex-col flex-wrap justify-center p-10'>
           <div className='title block text-center text-5xl text-[#757575] font-bold'>FANTASY SCORE</div>
@@ -39,23 +58,46 @@ function Comparison() {
           </div>
         </div>
       </div>
-      <div className='flex xl:flex-row z-10 flex-col xl:fixed w-full xl:bottom-20 xl:gap-10 gap-20'>
+      <div className='flex xl:flex-row z-10 flex-col xl:fixed w-full xl:bottom-20 xl:gap-10 gap-20 absolute'>
         <div className='flex flex-col items-center'>
           {/* <div className='logo1'>
             logo1
           </div> */}
-          <div className='team1 bg-sadium bg-contain bg-no-repeat w-[70%]'>
-            <img src='./stadium.png'/>
+          <div className='team1 w-[70%]'>
+            <img src='./stadium.png' className='bsolute'/>
+            {/* <PlayerFormation players={playerData} /> */}
           </div>
+          
         </div>
         <div className='flex flex-col items-center'>
           {/* <div className='logo2'>
             logo2
           </div> */}
-          <div className='team1 bg-sadium bg-contain bg-no-repeat w-[70%]'>
-            <img src='./stadium.png' />
+          <div className='team1 w-[70%]'>
+            <img src='./stadium.png' className='bsolute'/>
+            {/* <PlayerFormation players={playerData} /> */}
           </div>
-          {/* <PlayerComponent imageSrc='https://cdn.sportmonks.com/images/cricket/players/2/2.png' number={1} name='abs'/> */}
+        </div>
+      </div>
+      <div className='flex xl:flex-row z-10 flex-col xl:fixed w-full xl:bottom-20 xl:gap-10 gap-20 absolute'>
+        <div className='flex flex-col items-center'>
+          {/* <div className='logo1'>
+            logo1
+          </div> */}
+          <div className='team1 w-[70%]'>
+            {/* <img src='./stadium.png' className='bsolute'/> */}
+            <PlayerFormation players={playerData} />
+          </div>
+          
+        </div>
+        <div className='flex flex-col items-center'>
+          {/* <div className='logo2'>
+            logo2
+          </div> */}
+          <div className='team1 w-[70%]'>
+            {/* <img src='./stadium.png' className='bsolute'/> */}
+            <PlayerFormation players={playerData} />
+          </div>
         </div>
       </div>
     </div>
