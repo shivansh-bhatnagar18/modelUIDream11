@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import SearchDropdown from "../../components/searchDropdown";
 import { Button } from '@mui/material';
+import Link from 'next/link';
 
 export default function Mainpage() {
   const lightTheme = createTheme({
@@ -57,14 +58,14 @@ export default function Mainpage() {
       <CssBaseline />
       <div className="h-screen flex justify-center bg-[#000426] flex-wrap opacity-90">
         {/* <img src='/bg.png' alt="logo" className="w-24 h-24 mt-10" /> */}
-        <div className="mt-10 font-bold text-8xl text-center w-screen">
+        <div className="mt-10 font-bold text-white text-8xl text-center w-screen">
           DREAM11
         </div>
         <div className="flex flex-col items-center">
-          <div className="font-bold text-5xl">
+          <div className="font-bold text-white text-5xl">
             SELECT YOUR TRAINING AND
           </div>
-          <div className="font-bold text-5xl justify-center">
+          <div className="font-bold text-white text-5xl justify-center">
             TESTING PERIOD
           </div> 
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
@@ -75,7 +76,9 @@ export default function Mainpage() {
               <SearchDropdown label="Testing Period" periodData={periodData} />
             </div>
             <Button type="submit" variant="contained" color="primary" className="mt-10">
-              Submit
+              <Link href={'/comparison'}>
+                Submit
+              </Link>
             </Button>
           </form>
         </div>
