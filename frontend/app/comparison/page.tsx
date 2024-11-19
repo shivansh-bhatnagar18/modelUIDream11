@@ -6,18 +6,17 @@ import { Button } from '@mui/material'
 import PlayerFormation from '@/components/playerFormation'
 
 const playerData = [
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/2/2.png', number: 1, name: 'Zaheer Abbas' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/3/3.png', number: 2, name: 'Ahmed Shehzad' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/4/4.png', number: 3, name: 'Anwar Ali' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/5/5.png', number: 4, name: 'Sarfraz Ahmed' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/6/6.png', number: 5, name: 'Azhar Ali' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/7/7.png', number: 6, name: 'Fakhar Zaman' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/8/8.png', number: 7, name: 'Imam ul Haq' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/9/9.png', number: 8, name: 'Babar Azam' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/10/10.png', number: 9, name: 'Asad Shafiq' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/11/11.png', number: 10, name: 'Haris Sohail' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/12/12.png', number: 11, name: 'Usman Salahuddin' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/13/13.png', number: 12, name: 'Yasir Shah' }
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/20/148.png', number: 148, name: 'Jason Roy' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/21/149.png', number: 149, name: 'Mark Stoneman' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/22/150.png', number: 150, name: 'Chris Woakes' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/23/151.png', number: 151, name: 'Jonny Bairstow' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/24/152.png', number: 152, name: 'Sam Billings' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/25/153.png', number: 153, name: 'Sir Alastair Cook' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/26/154.png', number: 154, name: 'Alex Hales' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/27/155.png', number: 155, name: 'Jack Leach' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/28/156.png', number: 156, name: 'Craig Overton' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/29/157.png', number: 157, name: 'Adil Rashid' },
+  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/30/158.png', number: 158, name: 'Ben Stokes' }
 ]
 
 function Comparison() {
