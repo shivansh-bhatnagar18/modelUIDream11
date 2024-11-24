@@ -14,7 +14,9 @@
     "@mui/material": "^6.1.7",
     "@mui/styled-engine-sc": "^6.1.7",
     "@next/font": "^14.2.15",
+    "fs": "^0.0.1-security",
     "next": "15.0.3",
+    "papaparse": "^5.4.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "styled-components": "^6.1.13"
