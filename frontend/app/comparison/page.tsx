@@ -50,20 +50,6 @@ const readCSVImageData = (): Promise<any[]> => {
   });
 };
 
-const playerData = [
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/20/148.png', number: 148, name: 'Jason Roy' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/21/149.png', number: 149, name: 'Mark Stoneman' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/22/150.png', number: 150, name: 'Chris Woakes' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/23/151.png', number: 151, name: 'Jonny Bairstow' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/24/152.png', number: 152, name: 'Sam Billings' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/25/153.png', number: 153, name: 'Sir Alastair Cook' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/26/154.png', number: 154, name: 'Alex Hales' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/27/155.png', number: 155, name: 'Jack Leach' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/28/156.png', number: 156, name: 'Craig Overton' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/29/157.png', number: 157, name: 'Adil Rashid' },
-  { imageSrc: 'https://cdn.sportmonks.com/images/cricket/players/30/158.png', number: 158, name: 'Ben Stokes' }
-]
-
 function Comparison() {
 
   
