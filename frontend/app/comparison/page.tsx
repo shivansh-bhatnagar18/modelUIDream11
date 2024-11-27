@@ -1,8 +1,5 @@
 'use client'
 import React from 'react'
-import SearchDropdown from '@/components/searchDropdown'
-import PlayerComponent from '@/components/playerAvatar'
-import { Button } from '@mui/material'
 import PlayerFormation from '@/components/playerFormation'
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse';
@@ -126,13 +123,13 @@ function Comparison() {
   }, [matchDate]);
   
   return (
-    <div className='flex justify-between bg-[#000426] h-full xl:h-screen flex-col'>   
-      <div className='flex flex-col flex-wrap lg:z-50 z-10 items-center'>
-        <div className="mt-10 pb-10 font-bold text-8xl text-center">
+    <div className="flex flex-col justify-between bg-[#000426] min-h-screen">
+      <div className="flex flex-col items-center z-10">
+        <div className="mt-10 pb-10 font-bold text-4xl sm:text-6xl lg:text-8xl text-center text-white">
           DREAM11
         </div>
-        <div className='flex flex-row justify-center'>
-        <div className='w-min flex justify-center bg-[#D9D9D9] rounded-l'>
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="w-full md:w-auto flex justify-center bg-[#D9D9D9] rounded-l p-2 z-10">
           <Autocomplete
             disablePortal
             id="select-period"
@@ -144,68 +141,50 @@ function Comparison() {
               setMatchDate(newValue ? newValue.value || '' : '');
             }}
           />
-        </div>
-        </div>
-        <div className='data flex flex-col flex-wrap justify-center p-10'>
-          <div className='title block text-center text-5xl text-[#757575] font-bold'>FANTASY SCORE</div>
-          <div className='flex flex-wrap justify-center'>
-          <div className='left text-right'>
-            <div className='score font-bold text-9xl text-[#A9A9A9] mr-2'>{aiPoints}</div>
-            <div className='AI text-5xl text-[#757575] font-bold mr-2'>AI</div>
-          </div>
-          <div className='mid h-full w-1 bg-white'></div>
-          <div className='right text-left'>
-            <div className='score font-bold text-9xl text-[#A9A9A9] ml-2'>{realPoints}</div>
-            <div className='actual text-5xl text-[#757575] font-bold ml-2'>REAL</div>
-          </div>
           </div>
         </div>
-      </div>
-      <div className='flex xl:flex-row z-10 flex-col xl:fixed w-full xl:bottom-20 xl:gap-10 gap-20 absolute'>
-        <div className='flex flex-col items-center'>
-          {/* <div className='logo1'>
-            logo1
-          </div> */}
-          <div className='team1 w-[70%]'>
-            <img src='./stadium.png' className='bsolute'/>
-            {/* <PlayerFormation players={playerData} /> */}
+        <div className="data flex flex-col flex-wrap justify-center p-10">
+          <div className="title block text-center text-3xl sm:text-4xl lg:text-4xl text-[#757575] font-bold">
+            FANTASY SCORE
           </div>
-          
-        </div>
-        <div className='flex flex-col items-center'>
-          {/* <div className='logo2'>
-            logo2
-          </div> */}
-          <div className='team1 w-[70%]'>
-            <img src='./stadium.png' className='bsolute'/>
-            {/* <PlayerFormation players={playerData} /> */}
+          <div className="flex flex-row flex-wrap justify-center items-center">
+            <div className="left text-right flex flex-col items-end m-2">
+              <div className="score font-bold text-6xl sm:text-7xl lg:text-6xl text-[#A9A9A9]">
+                {aiPoints}
+              </div>
+              <div className="AI text-3xl md:text-4xl lg:text-5xl text-[#757575] font-bold">
+                AI
+              </div>
+            </div>
+            <div className='mid h-20 md:h-24 w-1 bg-white'></div>
+            <div className="right text-left flex flex-col items-start m-2">
+              <div className="score font-bold text-6xl md:text-7xl lg:text-6xl text-[#A9A9A9]">
+                {realPoints}
+              </div>
+              <div className="actual text-3xl md:text-4xl lg:text-5xl text-[#757575] font-bold">
+                REAL
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className='flex xl:flex-row z-10 flex-col xl:fixed w-full xl:bottom-20 xl:gap-10 gap-20 absolute'>
-        <div className='flex flex-col items-center'>
-          {/* <div className='logo1'>
-            logo1
-          </div> */}
-          <div className='team1 w-[70%]'>
-            {/* <img src='./stadium.png' className='bsolute'/> */}
+      <div className="flex flex-col lg:flex-row z-0 items-center lg:fixed w-full lg:bottom-20 gap-10 py-4 px-4">
+        <div className="flex flex-col items-center">
+          <div className="team1 w-full md:w-[70%] relative">
+            {mae ? (<img src='./stadium.png' className='-z-10 absolute h-full'/>): (null)}
             <PlayerFormation players={playerDataTeam1} />
           </div>
-          
         </div>
-        <div className='flex flex-col items-center'>
-          {/* <div className='logo2'>
-            logo2
-          </div> */}
-          <div className='team1 w-[70%]'>
-            {/* <img src='./stadium.png' className='bsolute'/> */}
+        <div className="flex flex-col items-center">
+          <div className="team2 w-full md:w-[70%] relative">
+            {mae ? (<img src='./stadium.png' className='-z-10 absolute h-full'/>): (null)}
             <PlayerFormation players={playerDataTeam2} />
           </div>
         </div>
       </div>
-      <div className='text-center text-3xl text-[#757575] font-bold'>
-          MEAN ABSOLUTE ERROR : {mae}
-        </div>
+      <div className="text-center text-xl md:text-2xl lg:text-3xl text-[#757575] font-bold my-4">
+        MEAN ABSOLUTE ERROR: {mae}
+      </div>
     </div>
   )
 }
