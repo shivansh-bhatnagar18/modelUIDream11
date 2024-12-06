@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import SearchDropdown from "../../components/searchDropdown";
 import { Button } from '@mui/material';
 import Link from 'next/link';
+import React from 'react';
 
 export default function Mainpage() {
   const lightTheme = createTheme({
@@ -53,6 +54,27 @@ export default function Mainpage() {
     // Handle form submission logic here
   };
 
+  const [trainingPeriodStart, setTrainingPeriodStart] = React.useState('');
+  const [trainingPeriodEnd, setTrainingPeriodEnd] = React.useState('');
+  const [testingPeriodStart, setTestingPeriodStart] = React.useState('');
+  const [testingPeriodEnd, setTestingPeriodEnd] = React.useState('');
+
+  const handleTrainingPeriodStartChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTrainingPeriodStart(event.target.value);
+  };
+
+  const handleTrainingPeriodEndChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTrainingPeriodEnd(event.target.value);
+  };
+
+  const handleTestingPeriodStartChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTestingPeriodStart(event.target.value);
+  };
+
+  const handleTestingPeriodEndChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTestingPeriodEnd(event.target.value);
+  };
+
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
@@ -69,16 +91,40 @@ export default function Mainpage() {
             TESTING PERIOD
           </div> 
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
-            <div className='mt-11 bg-[#D9D9D9] rounded-l'>
-              <SearchDropdown label="Training Period" periodData={periodData} />
+            <div className='mt-4'>
+              <label className="text-white mr-5">Select Training Period:</label>
+              <input 
+              type="date" 
+              value={trainingPeriodStart} 
+              onChange={handleTrainingPeriodStartChange} 
+              className="mt-2 p-2 rounded bg-white text-black"
+              />
+              <span className="text-white mx-2">to</span>
+              <input 
+              type="date" 
+              value={trainingPeriodEnd} 
+              onChange={handleTrainingPeriodEndChange} 
+              className="mt-2 p-2 rounded bg-white text-black"
+              />
             </div>
-            <div className='mt-1 bg-[#D9D9D9] rounded-l'>
-              <SearchDropdown label="Testing Period" periodData={periodData} />
+            <div className='mt-4'>
+              <label className="text-white mr-5">Select Testing Period:</label>
+              <input 
+              type="date" 
+              value={testingPeriodStart} 
+              onChange={handleTestingPeriodStartChange} 
+              className="mt-2 p-2 rounded bg-white text-black"
+              />
+              <span className="text-white mx-2">to</span>
+              <input 
+              type="date" 
+              value={testingPeriodEnd} 
+              onChange={handleTestingPeriodEndChange} 
+              className="mt-2 p-2 rounded bg-white text-black"
+              />
             </div>
-            <Button type="submit" variant="contained" color="primary" className="mt-10">
-              <Link href={'/comparison'}>
-                Submit
-              </Link>
+            <Button type="submit" variant="contained" color="primary" className="mt-10" onClick={() => setTimeout(() => window.location.href = '/comparison', 10000)}>
+              Submit
             </Button>
           </form>
         </div>

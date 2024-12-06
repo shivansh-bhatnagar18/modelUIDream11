@@ -168,7 +168,7 @@ function Comparison() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row z-0 items-center lg:fixed w-full lg:bottom-20 gap-10 py-4 px-4">
+      <div className="flex flex-col lg:flex-row z-0 items-center lg:fixed w-full lg:bottom-20 gap-48 py-4 px-4">
         <div className="flex flex-col items-center">
           <div className="team1 w-full md:w-[70%] relative">
             {mae ? (<img src='./stadium.png' className='-z-10 absolute h-full'/>): (null)}
@@ -182,8 +182,23 @@ function Comparison() {
           </div>
         </div>
       </div>
-      <div className="text-center text-xl md:text-2xl lg:text-3xl text-[#757575] font-bold my-4">
+      <div className="text-center text-xl md:text-2xl lg:text-3xl text-[#757575] font-bold ">
         MEAN ABSOLUTE ERROR: {mae}
+      </div>
+      <div className="flex justify-center my-4">
+        <button
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = csvFilePath;
+            link.download = 'data.csv';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Download Data CSV
+        </button>
       </div>
     </div>
   )
